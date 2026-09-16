@@ -1,47 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Mario World | Arcade</title>
-    <style>
-        /* This makes the background black and centers the game perfectly */
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #000; /* Pure black background */
-            overflow: hidden; /* No scrollbars */
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Class Game</title>
+  <style>
+    * { box-sizing: border-box; }
 
-        /* Styling the game box */
-        .game-wrapper {
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
-            border: 2px solid #333;
-            line-height: 0;
-        }
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: #111827;
+      color: #f9fafb;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
 
-        iframe {
-            width: 800px;
-            height: 600px;
-            border: none;
-        }
-    </style>
+    .page {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      height: 100%;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.65rem 1rem;
+      background: #1f2937;
+      border-bottom: 1px solid #374151;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    a {
+      padding: 0.45rem 0.75rem;
+      border-radius: 0.45rem;
+      background: #2563eb;
+      color: #fff;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    a:hover,
+    a:focus-visible { background: #1d4ed8; }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: #000;
+    }
+  </style>
 </head>
 <body>
+  <main class="page">
+    <header>
+      <h1>Class Game</h1>
+      <a href="https://classicjoy.games/embed?slug=super-mario-bros"
+         target="_blank"
+         rel="noopener noreferrer">Open game in a new tab</a>
+    </header>
 
-    <div class="game-wrapper">
-        <iframe 
-            src="https://classicjoy.games/embed?slug=super-mario-bros" 
-            allowfullscreen 
-            sandbox="allow-scripts allow-same-origin allow-pointer-lock"
-            title="Super Mario World">
-        </iframe>
-    </div>
-
+    <iframe
+      src="https://classicjoy.games/embed?slug=super-mario-bros"
+      title="Super Mario Bros game"
+      allow="autoplay; fullscreen; gamepad"
+      allowfullscreen
+      referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+  </main>
 </body>
 </html>
